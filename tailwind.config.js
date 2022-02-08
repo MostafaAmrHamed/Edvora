@@ -4,7 +4,18 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          1: '#292929',
+          2: '#131313',
+        },
+        subtext: '#FFFFFF99',
+      },
+      fontFamily: {
+        body: ['SF Pro Display'],
+      },
+    },
   },
   plugins: [],
 }
