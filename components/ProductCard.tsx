@@ -2,8 +2,8 @@ import React from 'react'
 
 const ProductCard = () => {
   return (
-    <div className="w-[250px] rounded bg-primary-1 p-4 text-subtext">
-      <div className="mb-3 flex gap-4">
+    <div className="w-[250px] rounded bg-primary-1 p-4 text-subtext transition ease-in-out hover:scale-110">
+      <div className="mb-3 flex gap-8">
         <img
           src={
             'https://png.pngtree.com/png-clipart/20190920/original/pngtree-chemical-glass-product-illustration-png-image_4626884.jpg'
