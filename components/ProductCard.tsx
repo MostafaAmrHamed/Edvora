@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProductCard = () => {
   return (
-    <div className="w-[250px] rounded bg-primary-1 p-4 text-subtext transition ease-in-out hover:scale-110">
+    <div className="max-w-[300px] rounded bg-primary-1 p-4 text-subtext transition ease-in-out hover:scale-110">
       <div className="mb-3 flex gap-8">
         <img
           src={
@@ -13,15 +13,15 @@ const ProductCard = () => {
         />
         <div>
           <p className="text-lg text-white">Product Name</p>
-          <p>Brand Name</p>
+          <p className="text-sm">Brand Name</p>
           <p className="text-base text-white">$ 29.99</p>
         </div>
       </div>
-      <div className="flex justify-between">
+      <div className="mb-2 flex justify-between text-sm">
         <p>Location </p>
         <p>Date: 10:12:2021</p>
       </div>
-      <p>Description of the Product</p>
+      <p className="text-sm">Description of the Product</p>
     </div>
   )
 }
