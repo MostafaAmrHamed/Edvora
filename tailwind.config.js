@@ -13,7 +13,7 @@ module.exports = {
         subtext: '#FFFFFF99',
       },
       fontFamily: {
-        body: ['SF Pro Display'],
+        body: ['Noto Sans Display'],
       },
     },
   },
