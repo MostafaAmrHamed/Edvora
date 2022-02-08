@@ -13,7 +13,7 @@ const SliderProducts = () => {
       <div className=" rounded-2xl bg-primary-2 p-5">
         <Swiper
           modules={[Navigation, Mousewheel]}
-          spaceBetween={10}
+          spaceBetween={30}
           slidesPerView={1}
           breakpoints={{
             640: {
