@@ -17,15 +17,13 @@ export default function Home({
       <div>
         <div className="lg:grid lg:grid-cols-12 lg:gap-5">
           <div className="mb-10 lg:col-span-2 lg:mb-0">
-            <Filter />
+            <Filter items={products} />
           </div>
           <div className="lg:col-span-10 lg:col-start-4">
             <h1 className="mb-4 text-4xl font-bold text-[#FFFFFFDE]">Edvora</h1>
             <h1 className="mb-5 text-2xl font-medium text-subtext">Products</h1>
             <div className="mb-5">
               {cal_brands(products).map((item, index) => {
-                console.log(item)
-
                 return (
                   <SliderProducts
                     items={products}
