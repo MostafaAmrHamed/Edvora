@@ -28,11 +28,11 @@ const ProductCard: React.FC<product> = ({
           </p>
         </div>
       </div>
-      <div className="mb-2 flex justify-between text-sm">
+      <div className="mb-2 flex items-center justify-between text-xs">
+        <p>{address.state}</p>
         <p>
-          {address.state}, {address.city}
+          Date: <span className="font-semibold">{convertDate(date)}</span>
         </p>
-        <p>Date: {convertDate(date)}</p>
       </div>
       <p className="text-sm">{discription}</p>
     </div>
