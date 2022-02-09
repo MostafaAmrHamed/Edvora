@@ -1,8 +1,13 @@
 import Head from 'next/head'
+import { InferGetStaticPropsType } from 'next'
+import { product } from '../types'
+import { cal_brands } from '../logic'
 import Filter from '../components/Filter'
 import SliderProducts from '../components/SliderProducts'
 
-export default function Home() {
+export default function Home({
+  products,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className="container mx-auto flex min-h-screen flex-col p-5 xl:px-0">
       <Head>
@@ -18,14 +23,30 @@ export default function Home() {
             <h1 className="mb-4 text-4xl font-bold text-[#FFFFFFDE]">Edvora</h1>
             <h1 className="mb-5 text-2xl font-medium text-subtext">Products</h1>
             <div className="mb-5">
-              <SliderProducts />
-            </div>
-            <div>
-              <SliderProducts />
+              {cal_brands(products).map((item, index) => {
+                console.log(item)
+
+                return (
+                  <SliderProducts
+                    items={products}
+                    key={index}
+                    brand_name={item}
+                  />
+                )
+              })}
             </div>
           </div>
         </div>
       </div>
     </div>
   )
+}
+export const getStaticProps = async () => {
+  const res = await fetch('https://assessment-edvora.herokuapp.com/')
+  const products: product[] = await res.json()
+  return {
+    props: {
+      products,
+    },
+  }
 }
