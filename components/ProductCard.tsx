@@ -24,14 +24,19 @@ const ProductCard: React.FC<product> = ({
           <p className="text-lg text-white">{product_name}</p>
           <p className="text-sm">{brand_name}</p>
           <p className="text-base text-white">
-            <span className="text-xl">$</span> {price}
+            <span className="font-semibold">$</span> {price}
           </p>
         </div>
       </div>
-      <div className="mb-2 flex items-center justify-between text-xs">
-        <p>{address.state}</p>
+      <div className="mb-2 flex items-center justify-between gap-1 text-xs">
         <p>
-          Date: <span className="font-semibold">{convertDate(date)}</span>
+          {address.state}, {address.city}
+        </p>
+        <p>
+          Date:{' '}
+          <span className="font-semibold text-[#FFFFFFDE]">
+            {convertDate(date)}
+          </span>
         </p>
       </div>
       <p className="text-sm">{discription}</p>
